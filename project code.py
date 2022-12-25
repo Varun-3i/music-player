@@ -4,12 +4,12 @@ from pygame import mixer
 
 class MusicPlayer:
     def __init__(self, window ):
-        window.geometry('320x100'); window.title('Iris Player'); window.resizable(0,0)
-        Load = Button(window, text = 'Load',  width = 10, font = ('Times', 10), command = self.load)
-        Play = Button(window, text = 'Play',  width = 10,font = ('Times', 10), command = self.play)
-        Pause = Button(window,text = 'Pause',  width = 10, font = ('Times', 10), command = self.pause)
-        Stop = Button(window ,text = 'Stop',  width = 10, font = ('Times', 10), command = self.stop)
-        Load.place(x=0,y=20);Play.place(x=110,y=20);Pause.place(x=220,y=20);Stop.place(x=110,y=60) 
+        window.geometry('320x250'); window.title('optic Player'); window.resizable(0,0)
+        Load = Button(window, text = 'Load song',  width = 8, font = ('Times', 12), command = self.load)
+        start = Button(window, text = 'start music',  width = 8,font = ('Times', 12), command = self.play)
+        Pause = Button(window,text = 'Pause music',  width = 8, font = ('Times', 12), command = self.pause)
+        Stop = Button(window ,text = 'Stop music',  width = 8, font = ('Times', 12), command = self.stop)
+        Load.place(x=0,y=50);start.place(x=220,y=50);Pause.place(x=220,y=150);Stop.place(x=0,y=150) 
         self.music_file = False
         self.playing_state = False
     def load(self):
